@@ -19,6 +19,9 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        key_lst = pg.key.get_pressed() 
+        # print(key_lst[pg.K_UP])
+        move_vector = [-1, 0]
 
         x=tmr %3200
         screen.blit(bg_img, [-x, 0])

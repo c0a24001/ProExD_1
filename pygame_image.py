@@ -23,9 +23,19 @@ def main():
         # print(key_lst[pg.K_UP])
         move_vector = [-1, 0]
 
+        if key_lst[pg.K_UP]: # 上矢印キー
+           move_vector[1] -= 1 # 上に移動
+        if key_lst[pg.K_DOWN]: # 下矢印キー
+           move_vector[1] += 1 # 下に移動
+        if key_lst[pg.K_LEFT]: # 左矢印キー
+           move_vector[0] -= 1 # 左に移動
+        if key_lst[pg.K_RIGHT]: # 右矢印キー
+           move_vector[0] += 2 # 右に移動
+        kk_rct.move_ip(move_vector)
+
         x=tmr %3200
         screen.blit(bg_img, [-x, 0])
-        screen.blit(bg_img, [-x+1600, 0])
+        screen.blit(bg_img, [-x+800, 0])
         screen.blit(kk_img, [300, 200])
         pg.display.update()
         tmr += 1        

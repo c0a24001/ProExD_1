@@ -33,7 +33,7 @@ def main():
            move_vector[0] += 2 # 右に移動
         kk_rct.move_ip(move_vector)
 
-        x=tmr %3200
+        x = tmr %800
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img, [-x+800, 0])
         screen.blit(kk_img, [300, 200])
